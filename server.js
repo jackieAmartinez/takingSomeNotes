@@ -1,22 +1,27 @@
 // example code and further declarations/imports
 const express = require('express');
-const path = require('path');
-const fs = require('fs');
 const app = express();
-const db = require('./db/db.json');
-const route = require("./routes/routes");
+// const path = require('path');
+const fs = require('fs');
+const PORT = process.env.PORT || 3001;
+// const db = require('./db/db.json');
+
+const apiRoutes = require("./routes/apiRoutes");
 
 // initialize the app and create a port
 
 
-
+const { v4: uuidv4 } = require("uuid");
 // set up data formats (body parsing, static, and route middleware) so that express can parse
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// app.use('/api', apiRoutes);
-app.use('/', route);
+app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
+// app.use('/api', apiRoutes);
+app.use('/api', apiRoutes);
+app.use('/', apiRoutes);
+
+
 
 // notifies express to listen for activity, so that the server on the port can start
 app.listen(PORT, () => {
