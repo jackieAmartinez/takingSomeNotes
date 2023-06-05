@@ -19,11 +19,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
-// app.use('/api', apiRoutes);
-app.use('/api', apiRoutes);
+// app.use('/api', apiRoutes);NOT NEEDED
+// app.use('/api', apiRoutes);NOT NEEDED
 app.use('/', apiRoutes);
-
-
 
 // notifies express to listen for activity, so that the server on the port can start
 app.listen(PORT, () => {
