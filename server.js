@@ -6,7 +6,9 @@ const fs = require('fs');
 const PORT = process.env.PORT || 3001;
 // const db = require('./db/db.json');
 
-const apiRoutes = require("./routes/apiRoutes");
+const db = require('./db/db.json')
+
+const apiRoutes = require("./routes/apiRoute");
 
 // initialize the app and create a port
 
