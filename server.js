@@ -2,12 +2,13 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const app = express();
 const db = require('./db/db.json');
-const route = require("./routes/routes")
+const route = require("./routes/routes");
 
 // initialize the app and create a port
-const app = express();
-const PORT = process.env.PORT || 3001;
+
+
 
 // set up data formats (body parsing, static, and route middleware) so that express can parse
 app.use(express.urlencoded({ extended: true }));

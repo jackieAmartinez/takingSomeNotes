@@ -29,7 +29,7 @@ router.get("/api/notes", (req, res) => {
    // })
 });
 
-router.post("/api/notes", (req, res) => {
+router.post("./api/notes", (req, res) => {
    const { title, text } = req.body;
    const whatsNew = {
       title: title,
@@ -58,4 +58,4 @@ router.delete("/api/notes/:id", (req, res) => {
    res.send(`Success - Note #${id} has been deleted`);
 });
 
-module.exports = router;
+module.exports = route;
