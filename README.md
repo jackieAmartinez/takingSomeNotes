@@ -6,7 +6,7 @@ Pen-to-Paper is used to create a webpage that you can write, save, and delete no
 
 ## Usage
 
-[Deployed application](https://aqueous-lowlands-26468.herokuapp.com)
+[Deployed application](https://tranquil-reaches-29344.herokuapp.com/)
 
 ![1686234428428](image/README/1686234428428.png)
 
